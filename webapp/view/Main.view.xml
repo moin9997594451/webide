@@ -1,0 +1,23 @@
+<mvc:View controllerName="sap.moin.DigitalSignaturePad.controller.Main" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
+	xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<VBox>
+							<core:HTML id="html"></core:HTML>
+						</VBox>
+						<VBox>
+							<HBox>
+								<Button id="Signature" text="Signature" press="onSign"></Button>
+								<Button id="Save" text="Save" press="saveButton"></Button>
+								<Button id="clear" text="Clear" press="clearButton"></Button>
+							</HBox>
+						</VBox>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

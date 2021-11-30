@@ -1,0 +1,35 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:custom="glb.farms.mobile.controls"
+	controllerName="glb.farms.mobile.controller.FarmerConsent" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page showHeader="false" showNavButton="false">
+		<content>
+			<VBox width="100%">
+				<VBox>
+					<!--<HBox class="nes-consent-tile-hbox">
+						<HBox id="idConsenttImageList" items="{ConsentImageLocalModel>/ImageList}" class="nes-image-margin">
+							<items>
+								<VBox class="nes-image-delete-flex-consent">
+									<StandardTile icon="sap-icon://pdf-attachment" type="None" class="nes-consent-tile" press="onPreviewPDF"/>
+									<core:Icon src="sap-icon://delete" class="nes-consnet-image-delete" press="onDeletePress"
+										enabled="{ parts:[ { path: 'LocalDataModel>/UserInfo/businessRole' }], formatter: 'glb.farms.mobile.util.Formatter.NescafeRAPartnerField' }"></core:Icon>
+								</VBox>
+							</items>
+						</HBox>
+						<StandardTile icon="sap-icon://camera" type="None" class="nes-consent-tile" press="onCameraPress" visible="{LocalDataModel>/ConsentTaken}"/>
+					</HBox>-->
+					<core:HTML id="html"></core:HTML>
+				</VBox>
+				<VBox>
+					<HBox>
+						<Button id="Signature" text="Signature" press="onSign"></Button>
+						<Button id="Save" text="Save" press="saveButton"></Button>
+						<Button id="clear" text="Clear" press="clearButton"></Button>
+					</HBox>
+				</VBox>
+				<VBox class="nes-consent-button">
+					<Button text="Preview PDF" class="nes-rounded-button nes-green-button nes-buttom-width" press="generatePDF"/>
+					<Button text="{i18n>FARMER_CONSENT_DONE}" class="nes-rounded-button nes-green-button nes-buttom-width" press="onPressDone"/>
+				</VBox>
+			</VBox>
+		</content>
+	</Page>
+</core:View>
